@@ -7,7 +7,6 @@ const Navbar = () => {
   
   useEffect(()=>{
       console.log(location);
-
       return ()=>{
           console.clear();
       }
