@@ -26,18 +26,18 @@ const Addnote = () => {
                     <input type="text" className="htmlForm-control" id="title" name="title" aria-describedby="emailHelp" onChange={onChange}/>
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="description" className="htmlForm-label d-block">Description</label>
-                    <input type="text" className="htmlForm-control" id="description" name="description" />
+                    <label htmlFor="description" className="htmlForm-label d-block" >Description</label>
+                    <input type="text" className="htmlForm-control" id="description" name="description" onChange={onChange}/>
                 </div>
                 <div className="mb-3">
                     <label htmlFor="tag" className="htmlForm-label d-block">Tag</label>
-                    <input type="text" className="htmlForm-control" id="tag" name="tag" />
+                    <input type="text" className="htmlForm-control" id="tag" name="tag" onChange={onChange}/>
                 </div>
                 <div className="mb-3 htmlForm-check">
-                    <input type="checkbox" className="htmlForm-check-input mx-3" id="exampleCheck1" onChange={onChange}/>
+                    <input type="checkbox" className="htmlForm-check-input mx-3" id="exampleCheck1"/>
                     <label className="htmlForm-check-label" htmlFor="exampleCheck1">Check me out</label>
                 </div>
-                <button type="submit" className="btn btn-primary" onClick={handleAddNote}>Submit</button>
+                <button type="submit" className="btn btn-primary" onClick={handleAddNote}>Add Note</button>
             </htmlForm>
         </div>
     )
