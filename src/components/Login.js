@@ -19,7 +19,6 @@ const Login = (props) => {
             body: JSON.stringify(data)
         });
         const json = await response.json();
-        console.log(json);
         if(json.success){
             // ave the auth token and redirect 
             localStorage.setItem('token',json.authToken);

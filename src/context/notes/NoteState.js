@@ -18,7 +18,7 @@ const NoteState = (props) => {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
-          'auth-token': "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlNzQwZjAyYjBhYTYyMWQwMDcxNDU5In0sImlhdCI6MTY5Mjg3NzA0MH0.qDrp-F25nPRtpNUZ8TLYogtDyHK_-yZPe_L_P1S7thU"
+          'auth-token': localStorage.getItem('token')
         }
       });
       const json = await response.json();
@@ -32,7 +32,7 @@ const NoteState = (props) => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'auth-token': "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlNzQwZjAyYjBhYTYyMWQwMDcxNDU5In0sImlhdCI6MTY5Mjg3NzA0MH0.qDrp-F25nPRtpNUZ8TLYogtDyHK_-yZPe_L_P1S7thU"
+        'auth-token': localStorage.getItem('token')
       },
       body: JSON.stringify({title,description,tag})
     });
